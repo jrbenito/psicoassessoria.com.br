@@ -6,5 +6,8 @@ menu:
 # Read More text
 excerpt_link: Read More
 
-# Disqus Comments
+# Disqus Comments Shortname
 disqus_shortname:
+
+# Google Analytics Tracking ID
+google_analytics:
