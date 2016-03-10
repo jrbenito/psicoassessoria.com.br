@@ -11,3 +11,8 @@ disqus_shortname:
 
 # Google Analytics Tracking ID
 google_analytics:
+
+# Widgets List
+widgets:
+  about: This blog is based off the official bootstrap blog template. Checkout the corresponding tutorial at <a href="http://www.codeblocq.com">http://www.codeblocq.com</a
+  tags: true
