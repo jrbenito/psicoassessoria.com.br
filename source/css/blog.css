@@ -162,7 +162,9 @@ h6, .h6 {
 .blog-tags-container span.glyphicon, .blog-categories-container span.glyphicon {
     margin-right: 20px;
 }
-
+.blog-post-comments {
+    margin-top: 50px;
+}
 
 /*
  * Footer

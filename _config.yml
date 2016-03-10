@@ -5,3 +5,6 @@ menu:
 
 # Read More text
 excerpt_link: Read More
+
+# Disqus Comments
+disqus_shortname:
