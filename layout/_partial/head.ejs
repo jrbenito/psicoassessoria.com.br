@@ -7,7 +7,14 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon/favicon.ico">
 
-    <title>Blog Template for Bootstrap</title>
+    <%
+        var title = [];
+        if (page.title) title.push(page.title);
+        if (page.category) title.push(page.category);
+        if (page.tag) title.push(page.tag);
+        title.push(config.title);
+    %>
+    <title><%= title.join(' - ') %></title>
 
     <!-- Bootstrap core CSS -->
     <%- css('bootstrap/css/bootstrap.min.css') %>
@@ -25,5 +32,5 @@
     <![endif]-->
 
     <!-- Google Analytics -->
-    <%- partial('google_analytics') %>
+    <%- partial('google-analytics') %>
 </head>
