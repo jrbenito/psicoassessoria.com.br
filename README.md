@@ -6,7 +6,7 @@ Adaptation of http://getbootstrap.com/examples/blog/ for hexo
 When at the root of your project
 
 ```
-$ https://github.com/klugjo/bootstrap-blog-hexo.git
+$ https://github.com/klugjo/bootstrap-blog-hexo.git themes/bootstrap-blog
 ```
 
 # Tutorial
