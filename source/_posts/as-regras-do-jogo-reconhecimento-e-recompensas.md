@@ -1,5 +1,5 @@
 ---
-title: As Regras do Jogo: Reconhecimento e Recompensas
+title: "As Regras do Jogo: Reconhecimento e Recompensas"
 author: Armando Pastore Mendes Ribeiro
 date: 2010-02-28 00:00:00
 updated: 2017-02-16 18:40:00
