@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- 4.4.3
+branches:
+  only:
+  - development
+  - test-site-development
+  except:
+  - master
+  - gh-pages
+git:
+  depth: 1
+before_install:
+- npm install -g hexo-cli
+- npm install
+install:
+- hexo generate
+before_script:
+- git config --global user.name 'Josenivaldo Benito Jr'
+- git config --global user.email 'jrbenito@benito.qsl.br'
+- sed -i'' "s~git@github.com:jrbenito/psicoassessoria.com.br.git~https://${GH_TOKEN}:x-oauth-basic@github.com/jrbenito/psicoassessoria.com.br.git~"
+  _config.yml
+- git clone https://github.com/jrbenito/psicoassessoria.com.br.git .deploy_git -b gh-pages
+script:
+- hexo deploy --silent
+env:
+  global:
+  - secure: thwokMEqI4/k85pp4TApAvuzrhicrGJi+jEHYQ3NXeewY6Wd4D9oqnNXVzHQQnfJ7zV/ACs+Bro7i/xIyyEbf0BGEljm9qA4+L8dPSxyDswkApJlLMZJp9ptbrs6TKfluYyKvR96ki55XkiZVZpiIWCBNtV8P0pvIAhheQQydpXFh7P3FJLhVnzNzOV1l4W0HCNYnqaoiC6+lqRoOXncGYWqMC0CczF+xMIJsFqCZgZP0178DrPDDvzJDDHCsvep+94ck91jezhJV8qwwqua/ykxVuENC1y2Qus1sdQSS5ffh3bBQQAtcIw2K/6UDcA3OPY4RxbHHiwOxY19c3BJ1xDgRZduQd+p7ZyNpkAePTD6YRn2+89Z4Xdxk5F+ozeKVgitQoRSAXzsLZSwauZmp5g7QLS5IbcvjhYQfo/4tfLhSw3XaTiDKsJ+7jYbFQAJMjpe/oaj2WWbO4M6eKjq7fNKaV6UTontksMsxos6gm9n60JXJowSLR0d1qpzbZzuvAKT8UXsKdItnzEtVOrUd1N02yHW4RBoRCg1PtTDpHKAVKImQrn+f/drWJx2RwA8xIO6L/PoA0x0cHi16wAKEeYm/ByLaNKS0nSAuveWRfEaQsqVK1DX+NLGJZ54OwNCdn6FAK/7LSn9WOJ7iBN+M7lYto3mIU8z0DPrOJCRf9E=
